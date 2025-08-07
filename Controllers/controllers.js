@@ -1,5 +1,5 @@
-const { pool } = require("./database");
-const { calculateDistance } = require("./utils");
+const { pool } = require("../lib/database");
+const { calculateDistance } = require("../utils/utils");
 
 // Add School API Controller
 async function addSchool(req, res) {

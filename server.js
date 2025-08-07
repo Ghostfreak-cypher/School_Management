@@ -2,9 +2,9 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 
-const { initializeDatabase } = require("./database");
-const { validateSchoolData, validateUserLocation } = require("./validation");
-const { addSchool, listSchools } = require("./controllers");
+const { initializeDatabase } = require("./lib/database");
+const { validateSchoolData, validateUserLocation } = require("./utils/validation");
+const { addSchool, listSchools } = require("./Controllers/controllers");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
