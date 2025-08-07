@@ -52,7 +52,7 @@ app.use((err, req, res, next) => {
 // Initialize database and start server
 async function startServer() {
   try {
-     await initializeDatabase();
+     //await initializeDatabase();
 
     app.listen(PORT, () => {
       console.log(`School Management API is running on port ${PORT}`);
