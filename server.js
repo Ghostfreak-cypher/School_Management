@@ -3,11 +3,14 @@ const cors = require("cors");
 require("dotenv").config();
 
 const { initializeDatabase } = require("./lib/database");
-const { validateSchoolData, validateUserLocation } = require("./middleware/validation");
+const {
+  validateSchoolData,
+  validateUserLocation,
+} = require("./middleware/validation");
 const { addSchool, listSchools } = require("./Controllers/controllers");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3306;
 
 // Middleware
 app.use(cors());
@@ -49,7 +52,7 @@ app.use((err, req, res, next) => {
 // Initialize database and start server
 async function startServer() {
   try {
-    await initializeDatabase();
+     await initializeDatabase();
 
     app.listen(PORT, () => {
       console.log(`School Management API is running on port ${PORT}`);
