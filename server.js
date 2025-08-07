@@ -3,7 +3,7 @@ const cors = require("cors");
 require("dotenv").config();
 
 const { initializeDatabase } = require("./lib/database");
-const { validateSchoolData, validateUserLocation } = require("./utils/validation");
+const { validateSchoolData, validateUserLocation } = require("./middleware/validation");
 const { addSchool, listSchools } = require("./Controllers/controllers");
 
 const app = express();
